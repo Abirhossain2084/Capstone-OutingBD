@@ -18,7 +18,10 @@
             extend: {
               colors: {
                 clifford: '#da373d',
-                'primary-color': '#7CFC00',
+                'primary-color': '#95C134',
+                'primary-hover': '#63831f',
+                'secondary-color': '#2C3E50',
+                'secondary-hover': '#202e3b',
               }
             }
           }
@@ -34,67 +37,403 @@
 <body>
     <!-- Header -->
     <header>
-     <!-- Banner -->
-     <div class="hero min-h-screen" style="background-image: url('images/banner.jpg');">
-        <div class="hero-overlay bg-opacity-60">
-                 <!-- Navbar started -->
-                 <div class="navbar bg-transparent">
-                    <div class="navbar-start">
-                      <div class="dropdown">
-                        <label tabindex="0" class="btn btn-ghost lg:hidden">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </label>
-                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                          <li><a>Item 1</a></li>
-                          <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                              <li><a>Submenu 1</a></li>
-                              <li><a>Submenu 2</a></li>
-                            </ul>
-                          </li>
-                          <li><a>Item 3</a></li>
-                        </ul>
-                      </div>
-                      <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
-                    </div>
-                    <div class="navbar-center hidden lg:flex">
-                      <ul class="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li tabindex="0">
-                          <details>
-                            <summary>Parent</summary>
-                            <ul class="p-2">
-                              <li><a>Submenu 1</a></li>
-                              <li><a>Submenu 2</a></li>
-                            </ul>
-                          </details>
-                        </li>
-                        <li><a>Item 3</a></li>
-                      </ul>
-                    </div>
-                    <div class="navbar-end">
-                      <a class="btn">Button</a>
-                    </div>
-                  </div>
-                <!-- Navbar ended -->
-        </div>
-        <div class="hero-content text-center text-neutral-content">
-          <div class="max-w-md">
-            <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-            <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button class="btn btn-primary">Get Started</button>
-          </div>
-        </div>
-      </div>
+
     </header>
     <!-- Main sections  -->
     <main>
 
+
+<!-- book a tour -->
+
+<div class="container mx-auto px-4">
+  <div class="relative rounded-lg bg-cover bg-center bg-opacity-25" style="background-image: url('images/banner.jpg');">
+    <div class="container mx-auto  lg:px-20 lg:py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Booking Info -->
+            <div class="bg-transparent text-secondary-color border-2 rounded-lg p-8">
+              <h2 class="text-3xl text-white font-semibold mb-4">Booking Information</h2>
+              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis magna eget malesuada commodo.</p>
+              <ul class="list-disc pl-6">
+                  <li>Destination: Choose destination</li>
+                  <li>Date: Select date</li>
+                  <li>Duration: How long you will stay</li>
+              </ul>
+  
+              <div class="text-white mt-10">
+                <p>"Ready to embark on your dream adventure? Secure your spot now and be part of an unforgettable journey. Choose from our carefully curated destinations, handpicked experiences, and personalized itineraries. Your next travel story begins with us. Book your spot today and create memories that will last a lifetime."
+  
+                </p>
+              </div>
+          </div>
+            <!-- Contact Form -->
+            <div class=" bg-transparent border-2 rounded-lg p-8">
+              <h2 class="text-3xl text-white font-semibold mb-4">Contact Us</h2>
+              <form>
+                  <div class="mb-4 flex">
+                      <div class="w-1/2 pr-2">
+                          <label for="name" class="block font-medium">Name</label>
+                          <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg bg-transparent">
+                      </div>
+                      
+                      <div class="w-1/2 pl-2">
+                          <label for="email" class="block font-medium">Email</label>
+                          <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg bg-transparent">
+                      </div>
+                  </div>
+  
+                  <div class="w-1/25 pr-2">
+                    <label for="Date" class="block font-medium">Date and Time</label>
+                    <input type="datetime-local" id="name" name="name" class="w-full px-4 py-2 border rounded-lg bg-transparent">
+                  </div>
+                  
+                  
+                  <div class=" grid justify-center form-control w-full">
+                    <label class="label">
+                        <span class="label-text font-semibold  text-l">Pick the Destination </span>
+                    </label>
+                    <select class="select select-bordered border-white bg-transparent">
+                        <option class="" disabled selected>Pick one</option>
+                        <option>Cox's Bazar</option>
+                        <option>Sylhet</option>
+                        <option>Sajek</option>
+                        <option>Saint-martin</option>
+                        
+                    </select>
+                </div>
+                
+  
+                  <div class="mb-4">
+                      <label for="message" class="block font-bold">Message</label>
+                      <textarea id="message" name="message" class="w-full px-4 py-2 border rounded-lg h-32 bg-transparent"></textarea>
+                  </div>
+  
+                  <div class=" grid justify-center">
+                    <button type="submit" class="h-14 w-56 bg-primary-color hover:bg-primary-hover  text-white px-4 py-2 rounded-lg">Book Now</button>
+                  </div>
+                  
+              </form>
+          </div>
+          
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Book a tour -->
+
+<!-- Peocess/steps -->
+
+<div class="container mx-auto px-4">
+
+
+  <div class="py-20">
+    <div class="text-center">
+        <h2 class="text-4xl font-bold text-secondary-color">Explore our easy Steps</h2>
+        <div class="flex justify-center items-center mt-2">
+            <hr class="w-32 h-1 bg-black">
+            <div class="mx-2 text-primary-color">PROCESS</div>
+            <hr class="w-32 h-1 bg-black">
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+       
+
+  <div class="grid  justify-center grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 mb-20">
+
+    <!--destination-->
+    <div class="card  bg-base-100 shadow-xl image-full">
+      
+      <figure><img src="images/destination.jpg" alt="destination" /></figure>
+      
+     
+      <div class="card-body">
+
+        <div class="grid justify-center -mt-20 shadow-xl border-b-white">
+          <img width="120" height="120" src="https://img.icons8.com/bubbles/100/worldwide-location.png" alt="worldwide-location"/>
+        </div>
+
+        <div class="text-center text-2xl font-bold mt-8 text-white">
+          <h1>Destination</h1>
+        </div>
+
+       <p class="text-white text-center">"Discover your next destination and let the adventure unfold."
+
+       </p>
+        <div class="card-actions justify-center">
+          <button class="btn btn-primary bg-primary-color border-primary-hover hover:bg-primary-hover hover:border-primary-color">Explore more</button>
+        </div>
+      </div>
+    </div>
+    <!--payment-->
+    <div class="card  bg-base-100 shadow-xl image-full">
+      
+      <figure><img src="images/payment.jpg" alt="Shoes" /></figure>
+      
+     
+      <div class="card-body">
+
+        <div class="grid justify-center -mt-24 shadow-xl border-b-white">
+          <img width="120" height="120" src="https://img.icons8.com/bubbles/100/card-in-use.png" alt="card-in-use"/>
+        </div>
+
+        <div class="text-center text-2xl font-bold mt-8 text-white">
+          <h1>Payment</h1>
+        </div>
+
+       <p class="text-white text-center">"Complete your journey with a seamless and secure payment process."
+
+       </p>
+        <div class="card-actions justify-center">
+          <button class="btn btn-primary bg-primary-color border-primary-hover hover:bg-primary-hover hover:border-primary-color">Check Process</button>
+        </div>
+      </div>
+    </div>
+    <!--fly-->
+    <div class="card  bg-base-100 shadow-xl image-full">
+      
+      <figure><img src="images/fly.jpg" alt="Shoes" /></figure>
+      
+     
+      <div class="card-body">
+
+        <div class="grid justify-center -mt-20 shadow-xl border-b-white">
+          <img width="120" height="120" src="https://img.icons8.com/bubbles/100/airplane-take-off.png" alt="airplane-take-off"/>
+        </div>
+        <div class="text-center text-2xl font-bold mt-8 text-white">
+          <h1>Destination</h1>
+        </div>
+
+       <p class="text-white text-center">"Take off to new horizons and soar into extraordinary experiences."
+
+       </p>
+        <div class="card-actions justify-center">
+          <button class="btn btn-primary bg-primary-color border-primary-hover hover:bg-primary-hover hover:border-primary-color">Check Steps</button>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+<!-- End Peocess/steps -->
+
+<!-- guid -->
+
+    <div class="container mx-auto px-4 mt-20 mb-20">
+
+      <div class="py-20">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold text-secondary-color">Meet with our experienced guides.</h2>
+            <div class="flex justify-center items-center mt-2">
+                <hr class="w-32 h-1 bg-black">
+                <div class="mx-2 text-primary-color">GUIDES</div>
+                <hr class="w-32 h-1 bg-black">
+                
+            </div>
+        </div>
+    </div>
+
+        
+        <div>
+            
+        </div>
+
+       <div class="grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-12  items-center ">
+
+        <div class="card  glass">
+            
+            <figure><img src="images/shihubguid.jpg" alt="car!"/></figure>
+           
+            <div class=" flex justify-center  items-center -mt-6 ">
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/facebook.png" alt="facebook"/>
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/instagram-new--v1.png" alt="instagram-new--v1"/>
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/instagram-new--v2.png" alt="instagram-new--v2"/>
+              </div>
+           
+            <div class="card-body text-center items-center ">
+              <h2 class="font-bold text-xl ">SHIHAB AHMED</h2>
+              <hr class="w-32 h-0.5 bg-primary-color ">
+              <hr class="w-24 h-0 bg-primary-color ">
+              <p>A versatile individual with diverse talents."</p>
+              
+            </div>
+          </div>
+        <div class="card  glass">
+            
+            <figure><img src="images/shihab387398143_n.jpg" alt="car!"/></figure>
+           
+            <div class=" flex justify-center  items-center -mt-6 ">
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/facebook.png" alt="facebook"/>
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/instagram-new--v1.png" alt="instagram-new--v1"/>
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/instagram-new--v2.png" alt="instagram-new--v2"/>
+              </div>
+           
+            <div class="card-body text-center items-center ">
+              <h2 class="font-bold text-xl ">SHIHAB AHMED</h2>
+              <hr class="w-32 h-0.5 bg-primary-color ">
+              <hr class="w-24 h-0 bg-primary-color ">
+              <p>A versatile individual with diverse talents."</p>
+              
+            </div>
+          </div>
+        <div class="card  glass">
+            
+            <figure><img src="images/shihub2312463113_680015146644686_1337642618184116113_n.jpg" alt="car!"/></figure>
+           
+            <div class=" flex justify-center  items-center -mt-6 ">
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/facebook.png" alt="facebook"/>
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/instagram-new--v1.png" alt="instagram-new--v1"/>
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/instagram-new--v2.png" alt="instagram-new--v2"/>
+              </div>
+           
+            <div class="card-body text-center items-center ">
+              <h2 class="font-bold text-xl ">SHIHAB AHMED</h2>
+              <hr class="w-32 h-0.5 bg-primary-color ">
+              <hr class="w-24 h-0 bg-primary-color ">
+              <p>A versatile individual with diverse talents."</p>
+              
+            </div>
+          </div>
+        <div class="card  glass">
+            
+            <figure><img src="images/shihub4982837981541_6323125088868866359_n.jpg" alt="car!"/></figure>
+           
+            <div class=" flex justify-center  items-center -mt-6 ">
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/facebook.png" alt="facebook"/>
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/instagram-new--v1.png" alt="instagram-new--v1"/>
+                <img width="50" height="50" src="https://img.icons8.com/bubbles/50/instagram-new--v2.png" alt="instagram-new--v2"/>
+              </div>
+           
+            <div class="card-body text-center items-center ">
+              <h2 class="font-bold text-xl ">SHIHAB AHMED</h2>
+              <hr class="w-32 h-0.5 bg-primary-color ">
+              <hr class="w-24 h-0 bg-primary-color ">
+              <p>A versatile individual with diverse talents."</p>
+              
+            </div>
+          </div>
+
+          
+        
+       </div>
+       
+
+
+      </div>   
+ <!-- guid end -->
+
+
+<!-- clients  -->
+
+
+
+
+<!-- Clients end -->
+
     </main>
     <!-- Footer -->
-    <footer>
 
-    </footer>
+
+    <div class=" bg-black">
+
+      <div class="container mx-auto px-4">
+      
+            
+        <footer class="bg-black text-white py-8">
+          <div class="container mx-auto px-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <!-- Company Section -->
+                  <div class="text-center md:text-left lg:text-left">
+                      <h3 class="text-3xl font-bold mb-4 text-primary-hover">Company</h3>
+                      <ul class="space-y-2">
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Mission</a></li>
+                          <li><a href="#">Contact us</a></li>
+                          <li><a href="#">Terms and conditions</a></li>
+                          <li><a href="#">FAQs and conditions</a></li>
+                          <li><a href="#">Contact us</a></li>
+                      </ul>
+                  </div>
+                  
+                  <!-- Contact Section -->
+                  <div class="text-center md:text-left lg:text-left">
+                      <h3 class="text-3xl font-bold mb-4 text-primary-hover">Contact</h3>
+                      <address>
+                          <p>123 Main St</p>
+                          <p>City, Country</p>
+                          <p>Email: outingbd@gmail.com</p>
+                          <p>Phone: outing-0124522</p>
+                      </address>
+
+                      <div class=" flex justify-center md:justify-start lg:justify-start items-center mt-8 ">
+                        <img width="50" height="50" src="https://img.icons8.com/bubbles/50/facebook.png" alt="facebook"/>
+                        <img width="50" height="50" src="https://img.icons8.com/bubbles/50/instagram-new--v1.png" alt="instagram-new--v1"/>
+                        <img width="50" height="50" src="https://img.icons8.com/bubbles/50/instagram-new--v2.png" alt="instagram-new--v2"/>
+                        <img width="50" height="50" src="https://img.icons8.com/bubbles/50/linkedin.png" alt="linkedin"/>
+                      </div>
+                  </div>
+                  
+                  <!-- Gallery Section -->
+                  <div class="text-center md:text-left lg:text-left">
+                    <h3 class="text-3xl font-bold mb-4 text-primary-hover">Gallery</h3>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="relative overflow-hidden aspect-ratio-1/1 rounded-lg border-4 border-white">
+                            <img class="object-cover w-full h-full  bg-white" src="images/destination-1.jpg" alt="Image 1">
+                        </div>
+                        <div class="relative overflow-hidden aspect-ratio-1/1 rounded-lg border-4 border-white ">
+                            <img class="object-cover w-full h-full" src="images/destination-2.jpg" alt="Image 2">
+                        </div>
+                        <div class="relative overflow-hidden aspect-ratio-1/1 rounded-lg border-4 border-white">
+                            <img class="object-cover w-full h-full" src="images/destination-2.jpg" alt="Image 3">
+                        </div>
+                        <div class="relative overflow-hidden aspect-ratio-1/1 rounded-lg border-4 border-white">
+                            <img class="object-cover w-full h-full" src="images/destination-1.jpg" alt="Image 4">
+                        </div>
+                    </div>
+                </div>
+                  
+                  <!-- Newsletter Section -->
+                  <div class="text-center md:text-left lg:text-left">
+                      <h3 class="text-3xl font-bold mb-4 text-primary-hover">Newsletter</h3>
+                      <p>Subscribe to our newsletter for updates and special offers.</p>
+                      <form class="mt-4">
+                          <input type="email" class="w-full px-4 py-2 border rounded-lg" placeholder="Your Email">
+                          <button class="mt-2 bg-primary-color hover:bg-primary-hover text-white px-4 py-2 rounded-lg">Subscribe</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+          <hr class=" bg-white mt-10 ">
+
+      <div class="text-white  text-center pt-4 ">
+        <p>© All right reserved to OutingBD.com-2023</p>
+      </div>
+      </footer>
+
+      
+
+
+
+
+
+    </div>
+    </div>
+
+
+   
+
+
+    
 </body>
 </html>
